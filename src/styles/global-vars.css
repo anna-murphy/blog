@@ -1,0 +1,42 @@
+:root {
+  /* Colors */
+  --background-color: rgba(0, 0, 0, 1);
+  --background-lighter-color: hsl(0, 30%, 6%);
+  --main-text-color: rgba(255, 255, 255, 1);
+  --main-accent-color: rgba(255, 0, 0, 1);
+  --main-accent-darker: rgb(255, 60, 60);
+  --color-transparent: rgba(0, 0, 0, 0);
+
+  /* Fonts */
+
+  --header-font-family: Verdana, sans-serif;
+  --main-font-family: Liberation Sans, sans-serif;
+
+  /*  Sizes  */
+
+  --spc-xxl: 3rem; /* 48 px */
+  --spc-xl: 2.5rem; /* 40 px */
+  --spc-lg: 2rem; /* 32 px */
+  --spc-md: 1.5rem; /* 24 px */
+  --spc-sm: 1rem; /* 16 px */
+  --spc-xs: 0.75rem; /* 12 px */
+  --spc-xxs: 0.5rem; /* 8 px */
+  --spc-tiny: 2px;
+
+  --text-xxl: var(--spc-xxl);
+  --text-xl: var(--spc-xl);
+  --text-lg: var(--spc-lg);
+  --text-md: var(--spc-md);
+  --text-sm: var(--spc-sm);
+  --text-xs: var(--spc-xs);
+  --text-xss: var(--spc-xxs);
+
+  --radius-lg: 8px;
+  --radius-md: 4px;
+  --radius-sm: 2px;
+  --radius: var(--radius-md);
+
+  /* Break Points */
+
+  --desktop-breakpoint: 768px;
+}

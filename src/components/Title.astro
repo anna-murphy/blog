@@ -1,0 +1,28 @@
+---
+interface Props {
+	level: number;
+}
+
+const { level } = Astro.props;
+---
+
+{level === 1 ? <h1 class="title"><slot /></h1> : null}
+{level === 2 ? <h2 class="title"><slot /></h2> : null}
+{level === 3 ? <h3 class="title"><slot /></h3> : null}
+{level === 4 ? <h4 class="title"><slot /></h4> : null}
+<style scoped>
+    .title {
+    }
+    h1 {
+        font-size: var(--text-xl);
+    }
+    h2 {
+        font-size: var(--text-lg);
+    }
+    h3 {
+        font-size: var(--text-md);
+    }
+    h4 {
+        font-size: var(--text-sm);
+    }
+</style>

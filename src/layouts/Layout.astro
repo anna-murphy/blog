@@ -4,48 +4,56 @@ interface Props {
 }
 
 const { title } = Astro.props;
+
+import "../styles/reset.css";
+import "../styles/liberation-sans.css";
+import "../styles/veranda.css";
+import "../styles/global-vars.css";
+import "../styles/global.css";
+import "../styles/layout.css";
+
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
+		<meta name="author" content="Anna Murphy">
+		<meta name="description" content="Coffee's Portfolio Website">
+		<meta name="keywords" content="coffee, ahcoffeebeans, art, rpgs, ttrpgs">
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
+		<title>ahcoffeebeans --- {title}</title>
 	</head>
 	<body>
-		<slot />
+		<div class="page-wrapper">
+			<Header />
+			<main class="full-bleed-wrapper">
+				<slot />
+			</main>
+			<div class="spacer"></div>
+			<Footer />
+		</div>
 	</body>
 </html>
-<style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
+
+<style scoped>
+	.page-wrapper {
+		width: 100%;
+		min-height: 100vh;
+		display: flex;
+		flex-direction: column;
+		align-items: stretch;
+		justify-content: flex-start;
 	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-		background-size: 224px;
+
+	.spacer {
+		flex: 1;
 	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
+
+	main {
 	}
 </style>

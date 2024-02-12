@@ -1,0 +1,26 @@
+---
+interface Props {
+    href: string;
+    text: string;
+}
+
+const { href, text } = Astro.props;
+
+import Card from '../components/Card.astro';
+---
+<Card>
+    <a class="grow" href={href}>
+        <span>{text}</span>
+        <slot />
+    </a>
+</Card>
+<style scoped>
+    a {
+		text-align: center;
+		display: flex;
+		flex-direction: column-reverse;
+		align-items: center;
+		justify-content: center;
+		gap: var(--spc-sm);
+	}
+</style>

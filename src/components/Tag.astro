@@ -1,0 +1,22 @@
+---
+interface Props {
+    variant?: 'fill' | 'ghost';
+}
+
+const { variant } = Astro.props;
+---
+<li class:list={["tag", variant]}><slot /></li>
+<style scoped define:vars={{ }}>
+    .tag {
+        font-weight: bold;
+        font-size: var(--text-xs);
+        padding: var(--spc-tiny) var(--spc-xs);
+        border-radius: calc(2 * var(--text-sm));
+        border: var(--radius) solid var(--main-accent-color);
+        background-color: var(--main-accent-color);
+        color: var(--background-color);
+        .ghost {
+            background-color: var(--color-transparent);
+        }
+    }
+</style>

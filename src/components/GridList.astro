@@ -1,0 +1,36 @@
+---
+type Columns = {
+    sm?: number;
+    md?: number;
+    lg?: number;
+};
+
+interface Props {
+	columns?: Columns;
+}
+
+const { columns } = Astro.props;
+
+const colsSm = columns?.sm ?? 2;
+const colsMd = columns?.md ?? 3;
+const colsLg = columns?.lg ?? 4;
+---
+<section>
+    <slot />
+</section>
+<style scoped define:vars={{ colsSm, colsMd, colsLg }}>
+    section {
+        display: grid;
+		grid-template-columns: repeat(var(--colsLg), 1fr);
+		grid-column-gap: var(--spc-md);
+		grid-row-gap: var(--spc-md);
+
+        @media only screen and (max-width: 768px) {
+			grid-template-columns: repeat(var(--colsMd), 1fr);
+		}
+
+        @media only screen and (max-width: 480px) {
+			grid-template-columns: repeat(var(--colsSm), 1fr);
+		}
+    }
+</style>

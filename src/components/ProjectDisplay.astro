@@ -1,0 +1,55 @@
+---
+import Card from './Card.astro';
+import Title from './Title.astro';
+import ImageContainer from './ImageContainer.astro';
+import Tag from './Tag.astro';
+
+type ImageInfo = {
+    adjustX: number;
+    adjustY: number;
+    src: string;
+    alt: string;
+};
+
+interface Props {
+    imgInfo: ImageInfo;
+    title: string;
+    publicationDate: Date;
+    description: string;
+    tags: string[];
+    link: string;
+}
+
+const { imgInfo, title, publicationDate, description, tags, link } = Astro.props;
+---
+<Card flex="row">
+    <ImageContainer height={150} width={150} position={{ x: imgInfo.adjustX, y: imgInfo.adjustY }}>
+        <img src={imgInfo.src} alt={imgInfo.alt}>
+    </ImageContainer>
+    <section class="description-wrapper">
+        <Title level={3}><a href={link}>{title}</a></Title>
+        <span class="pub-date">published on {publicationDate.toLocaleDateString()}</span>
+        <p>{description}</p>
+        <ul class="tag-list">{tags.map((tag) => <Tag>{tag}</Tag>)}</ul>
+    </section>
+</Card>
+<style scoped>
+    .description-wrapper {
+        flex: 1;
+        display: flex;
+        flex-flow: column;
+        align-items: flex-start;
+        justify-content: space-around;
+
+    }
+    .pub-date {
+        font-style: italic;
+        font-size: var(--text-sm);
+    }
+    .tag-list {
+        display: flex;
+        flex-flow: row;
+        flex-wrap: wrap;
+        gap: var(--spc-tiny);
+    }
+</style>

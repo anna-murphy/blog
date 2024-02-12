@@ -1,0 +1,54 @@
+---
+---
+<nav>
+    <a href="/" class="home-link">
+        <img src="/images/profile.webp" class="nav-img" alt="A self portrait of coffee red and white with a black background.">
+        <h1 class="nav-header">coffee</h1>
+    </a>
+    <a href="/art" class="nav-link only-desktop grow">art</a>
+    <a href="/rpgs" class="nav-link only-desktop grow">rpgs</a>
+    <a href="/other" class="nav-link only-desktop grow">other projects</a>
+</nav>
+<style scoped>
+    nav {
+        padding: var(--spc-xxs) var(--spc-xs);
+        background-color: var(--background-lighter-color);
+        border-bottom: 1px solid var(--main-accent-color);
+        position: sticky;
+        position: -webkit-sticky; /* Safari */
+        top: 0;
+
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+        gap: var(--spc-xs);
+    }
+    
+    .home-link {
+        flex: 1;
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+        align-items: center;
+        text-decoration: none;
+    }
+
+    .nav-header {
+        font-family: var(--header-font-family);
+        font-size: var(--text-xl);
+        color: var(--main-text-color);
+        border: none;
+        text-decoration: none;
+    }
+    .nav-img {
+        height: 3.5rem;
+        border-radius: 100%;
+    }
+    .nav-link {
+        font-size: var(--text-lg);
+        font-family: var(--header-font-family);
+        border-radius: var(--radius);
+        border: 1px dotted var(--main-accent-color);
+        padding: var(--spc-tiny);
+    }
+</style>

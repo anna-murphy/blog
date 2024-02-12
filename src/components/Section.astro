@@ -1,0 +1,25 @@
+---
+interface Props {
+	title?: string;
+    direction?: "row" | "column";
+}
+
+const { title, direction } = Astro.props;
+
+import Title from "../components/Title.astro";
+---
+{title ? <Title level={2}>{title}</Title> : null}
+<section>
+    <slot />
+</section>
+<style scoped define:vars={{ flexDirection: direction || "row" }}>
+    h2 {
+        font-size: 2.25rem;
+    }
+    section {
+        display: flex;
+        flex-direction: var(--flexDirection);
+        flex-wrap: wrap;
+        align-items: center;
+    }
+</style>

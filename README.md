@@ -1,54 +1,33 @@
-# Astro Starter Kit: Basics
+# ahcoffeebeans portfolio
 
-```sh
-npm create astro@latest -- --template basics
+this is a portfolio website built with [Astro](https://astro.build) and hosted on github pages. the initial design was by [anna murphy](https://github.com/anna-murphy).
+
+## making changes
+
+this project uses github actions to automatically deploy a new version of the website whenever a change is made. view the workflow in `.github/workflows/deploy.yml`.
+
+to add a new project page, create a new markdown (`.md`) file in `src/content/projects` and it will be added to the website next time it's "pushed". anytime you need to add a new image, put it in `public/images`. you should be able to do this all from the web interface, without having to download anything.
+
+### into the weeds
+
+if you want to really get into the weeds of how this project works, it's going to require a bit of setup. if everything works out correctly, it shouldn't be strictly necessary, but if you want to change the layout, styling, or other broad site-wide things, the web interface on github probably wont't be enough.
+
+to get started, you're going to need to install [node](https://nodejs.org/en/download/package-manager) and [yarn](https://yarnpkg.com/).
+
+(((if you're installing yarn, their documentation says to install it by project, but in my experience using their install script is easier.)))
+
+```bash
+$ curl -o- -L https://yarnpkg.com/install.sh | bash
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+clone this repository to your computer (`git clone <repository-url>`), and then run the following commands:
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+```bash
+$ yarn install
+$ yarn start
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+this should open a window in your default browser with the website running.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+after you make your changes, commit them with `git commit` and save them on github with `git push`. [here](https://education.github.com/git-cheat-sheet-education.pdf) is a git cheatsheet for more info on how all that works.
 
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).

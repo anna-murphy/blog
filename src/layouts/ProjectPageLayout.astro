@@ -1,0 +1,36 @@
+---
+import { getCollection } from 'astro:content';
+
+import Layout from './Layout.astro';
+import Title from '../components/Title.astro';
+import ProjectDisplay from '../components/ProjectDisplay.astro';
+
+interface Props {
+    tag: string;
+}
+
+const { tag } = Astro.props;
+
+const allProjects = await getCollection("projects");
+const projectsWithTag = allProjects.filter(
+    (project) => project.data.tags.includes(tag),
+);
+---
+<Layout title={tag}>
+    <Title level={1}>{tag}</Title>
+    {projectsWithTag.length === 0 
+        ? <p>i dont have any {tag} projects yet. check back soon and i might have added some!</p> 
+        : undefined}
+    {projectsWithTag.length > 0
+        ? projectsWithTag.map((project) => (
+            <ProjectDisplay
+                link={`/projects/${project.slug}`}
+                title={project.data.title}
+                publicationDate={project.data.uploadDate}
+                description={project.data.description}
+                tags={project.data.tags}
+                imgInfo={{ ...project.data.image }}
+            />
+        ))
+        : undefined}
+</Layout>

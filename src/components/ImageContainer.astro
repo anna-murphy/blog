@@ -1,0 +1,31 @@
+---
+type Position = {
+    x?: number;
+    y?: number;
+}
+
+interface Props {
+    width: number;
+    height: number;
+    position?: Position;
+}
+
+const { width, height, position } = Astro.props;
+const horizontalPosition = `${position?.x?.toString() || '50'}%`;
+const verticalPosition = `${position?.y?.toString() || '50'}%`;
+---
+<div class="image-container">
+    <slot />
+</div>
+<style scoped define:vars={{ width: `${width}px`, height: `${height}px`, horizontalPosition, verticalPosition }}>
+    .image-container {
+        width: var(--width);
+        height: var(--height);
+        img {
+            width: var(--width);
+            height: var(--height);
+            object-fit: cover;
+            object-position: var(--horizontalPosition) var(--verticalPosition);
+        }
+    }
+</style>

@@ -1,0 +1,29 @@
+---
+import { getCollection } from "astro:content";
+import ProjectLayout from "../../layouts/ProjectLayout.astro";
+
+export async function getStaticPaths() {
+  const blogEntries = await getCollection("projects");
+  return blogEntries.map(entry => ({
+    params: { slug: entry.slug }, props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+
+const { Content } = await entry.render();
+---
+<ProjectLayout frontmatter={entry.data}>
+  <img src={entry.data.image.src} alt={entry.data.image.alt} class="full-bleed header-image">
+  <Content />
+</ProjectLayout>
+<style>
+  .header-image {
+    border-radius: var(--radius);
+    margin: auto;
+    width: 60%;
+    @media only screen and (max-width: 768px) {
+      width: 80%;
+    }
+  }
+</style>
