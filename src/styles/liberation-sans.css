@@ -1,13 +1,13 @@
 @font-face {
   font-family: "Liberation Sans";
-  src: url("/fonts/liberation-sans/LiberationSans-BoldItalic.eot");
+  src: url("/blog/fonts/liberation-sans/LiberationSans-BoldItalic.eot");
   src:
-    url("/fonts/liberation-sans/LiberationSans-BoldItalic.eot?#iefix")
+    url("/blog/fonts/liberation-sans/LiberationSans-BoldItalic.eot?#iefix")
       format("embedded-opentype"),
-    url("/fonts/liberation-sans/LiberationSans-BoldItalic.woff2")
+    url("/blog/fonts/liberation-sans/LiberationSans-BoldItalic.woff2")
       format("woff2"),
-    url("/fonts/liberation-sans/LiberationSans-BoldItalic.woff") format("woff"),
-    url("/fonts/liberation-sans/LiberationSans-BoldItalic.svg#LiberationSans-BoldItalic")
+    url("/blog/fonts/liberation-sans/LiberationSans-BoldItalic.woff") format("woff"),
+    url("/blog/fonts/liberation-sans/LiberationSans-BoldItalic.svg#LiberationSans-BoldItalic")
       format("svg");
   font-weight: bold;
   font-style: italic;
@@ -16,13 +16,13 @@
 
 @font-face {
   font-family: "Liberation Sans";
-  src: url("/fonts/liberation-sans/LiberationSans-Italic.eot");
+  src: url("/blog/fonts/liberation-sans/LiberationSans-Italic.eot");
   src:
-    url("/fonts/liberation-sans/LiberationSans-Italic.eot?#iefix")
+    url("/blog/fonts/liberation-sans/LiberationSans-Italic.eot?#iefix")
       format("embedded-opentype"),
-    url("/fonts/liberation-sans/LiberationSans-Italic.woff2") format("woff2"),
-    url("/fonts/liberation-sans/LiberationSans-Italic.woff") format("woff"),
-    url("/fonts/liberation-sans/LiberationSans-Italic.svg#LiberationSans-Italic")
+    url("/blog/fonts/liberation-sans/LiberationSans-Italic.woff2") format("woff2"),
+    url("/blog/fonts/liberation-sans/LiberationSans-Italic.woff") format("woff"),
+    url("/blog/fonts/liberation-sans/LiberationSans-Italic.svg#LiberationSans-Italic")
       format("svg");
   font-weight: normal;
   font-style: italic;
@@ -31,13 +31,13 @@
 
 @font-face {
   font-family: "Liberation Sans";
-  src: url("/fonts/liberation-sans/LiberationSans-Bold.eot");
+  src: url("/blog/fonts/liberation-sans/LiberationSans-Bold.eot");
   src:
-    url("/fonts/liberation-sans/LiberationSans-Bold.eot?#iefix")
+    url("/blog/fonts/liberation-sans/LiberationSans-Bold.eot?#iefix")
       format("embedded-opentype"),
-    url("/fonts/liberation-sans/LiberationSans-Bold.woff2") format("woff2"),
-    url("/fonts/liberation-sans/LiberationSans-Bold.woff") format("woff"),
-    url("/fonts/liberation-sans/LiberationSans-Bold.svg#LiberationSans-Bold")
+    url("/blog/fonts/liberation-sans/LiberationSans-Bold.woff2") format("woff2"),
+    url("/blog/fonts/liberation-sans/LiberationSans-Bold.woff") format("woff"),
+    url("/blog/fonts/liberation-sans/LiberationSans-Bold.svg#LiberationSans-Bold")
       format("svg");
   font-weight: bold;
   font-style: normal;
@@ -46,13 +46,13 @@
 
 @font-face {
   font-family: "Liberation Sans";
-  src: url("/fonts/liberation-sans/LiberationSans.eot");
+  src: url("/blog/fonts/liberation-sans/LiberationSans.eot");
   src:
-    url("/fonts/liberation-sans/LiberationSans.eot?#iefix")
+    url("/blog/fonts/liberation-sans/LiberationSans.eot?#iefix")
       format("embedded-opentype"),
-    url("/fonts/liberation-sans/LiberationSans.woff2") format("woff2"),
-    url("/fonts/liberation-sans/LiberationSans.woff") format("woff"),
-    url("/fonts/liberation-sans/LiberationSans.svg#LiberationSans")
+    url("/blog/fonts/liberation-sans/LiberationSans.woff2") format("woff2"),
+    url("/blog/fonts/liberation-sans/LiberationSans.woff") format("woff"),
+    url("/blog/fonts/liberation-sans/LiberationSans.svg#LiberationSans")
       format("svg");
   font-weight: normal;
   font-style: normal;

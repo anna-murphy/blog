@@ -4,6 +4,8 @@ import ImageLink from '../components/ImageLink.astro';
 import Title from '../components/Title.astro';
 import ImageContainer from '../components/ImageContainer.astro';
 import Layout from '../layouts/Layout.astro';
+
+import { formatLink } from "../utils/formatLink";
 ---
 
 <Layout title="portfolio">
@@ -17,26 +19,26 @@ import Layout from '../layouts/Layout.astro';
 	</p>
 	<Title level={2}>here's what i do</Title>
 	<GridList columns={{ lg: 3, md: 2, sm: 1 }}>
-		<ImageLink text="art" href="/art">
+		<ImageLink text="art" href={formatLink("/art")}>
 			<ImageContainer width={175} height={150}>
 				<img
-					src="/images/animus.jpg"
+					src={formatLink("/images/animus.jpg")}
 					alt="a character portrait of an original character from a game of Heart: the City Beneath"
 				>
 			</ImageContainer>
 		</ImageLink>
-		<ImageLink text="rpg assets" href="/rpgs">
+		<ImageLink text="rpg assets" href={formatLink("/rpgs")}>
 			<ImageContainer width={175} height={150} position={{ x: 0 }}>
 				<img
-					src="/images/fathom-sheet.jpeg"
+					src={formatLink("/images/fathom-sheet.jpeg")}
 					alt="image of a character sheet for Fathom designed in Google Sheets"
 				>
 			</ImageContainer>
 		</ImageLink>
-		<ImageLink text="other projects" href="/other">
+		<ImageLink text="other projects" href={formatLink("/other")}>
 			<ImageContainer width={175} height={150}>
 				<img
-					src="/images/video-editing-screencap.jpg"
+					src={formatLink("/images/video-editing-screencap.jpg")}
 					alt="a screenshot of video editing software depicting the creation of a video poem"
 				>
 			</ImageContainer>
@@ -45,13 +47,13 @@ import Layout from '../layouts/Layout.astro';
 	<Title level={2}>find me online</Title>
 	<GridList columns={{ lg: 3, md: 2 }}>
 		<ImageLink text="cohost" href="https://cohost.org/ahcoffeebeans">
-			<img src="/images/cohost.svg" alt="cohost logo" class="social-link">
+			<img src={formatLink("/images/cohost.svg")} alt="cohost logo" class="social-link">
 		</ImageLink>
 		<ImageLink text="itch.io" href="https://ahcoffeebeans.itch.io/">
-			<img src="/images/itchio.svg" alt="itch.io logo" class="social-link">
+			<img src={formatLink("/images/itchio.svg")} alt="itch.io logo" class="social-link">
 		</ImageLink>
 		<ImageLink text="youtube" href="https://www.youtube.com/@ahcoffeebeans">
-			<img src="/images/youtube.svg" alt="youtube logo" class="social-link">
+			<img src={formatLink("/images/youtube.svg")} alt="youtube logo" class="social-link">
 		</ImageLink>
 		{/*
 		<ImageLink text="tumblr" href="#">

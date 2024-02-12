@@ -1,4 +1,5 @@
 ---
+import { formatLink } from '../utils/formatLink';
 import Card from './Card.astro';
 import Title from './Title.astro';
 import ImageContainer from './ImageContainer.astro';
@@ -24,10 +25,10 @@ const { imgInfo, title, publicationDate, description, tags, link } = Astro.props
 ---
 <Card flex="row">
     <ImageContainer height={150} width={150} position={{ x: imgInfo.adjustX, y: imgInfo.adjustY }}>
-        <img src={imgInfo.src} alt={imgInfo.alt}>
+        <img src={formatLink(imgInfo.src)} alt={imgInfo.alt}>
     </ImageContainer>
     <section class="description-wrapper">
-        <Title level={3}><a href={link}>{title}</a></Title>
+        <Title level={3}><a href={formatLink(link)}>{title}</a></Title>
         <span class="pub-date">published on {publicationDate.toLocaleDateString()}</span>
         <p>{description}</p>
         <ul class="tag-list">{tags.map((tag) => <Tag>{tag}</Tag>)}</ul>

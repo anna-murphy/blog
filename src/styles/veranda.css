@@ -1,11 +1,11 @@
 @font-face {
   font-family: "Verdana";
-  src: url("/fonts/veranda/Verdana.eot");
+  src: url("/blog/fonts/veranda/Verdana.eot");
   src:
-    url("/fonts/veranda/Verdana.eot?#iefix") format("embedded-opentype"),
-    url("/fonts/veranda/Verdana.woff2") format("woff2"),
-    url("/fonts/veranda/Verdana.woff") format("woff"),
-    url("/fonts/veranda/Verdana.svg#Verdana") format("svg");
+    url("/blog/fonts/veranda/Verdana.eot?#iefix") format("embedded-opentype"),
+    url("/blog/fonts/veranda/Verdana.woff2") format("woff2"),
+    url("/blog/fonts/veranda/Verdana.woff") format("woff"),
+    url("/blog/fonts/veranda/Verdana.svg#Verdana") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -13,12 +13,12 @@
 
 @font-face {
   font-family: "Verdana";
-  src: url("/fonts/veranda/Verdana-Bold.eot");
+  src: url("/blog/fonts/veranda/Verdana-Bold.eot");
   src:
-    url("/fonts/veranda/Verdana-Bold.eot?#iefix") format("embedded-opentype"),
-    url("/fonts/veranda/Verdana-Bold.woff2") format("woff2"),
-    url("/fonts/veranda/Verdana-Bold.woff") format("woff"),
-    url("/fonts/veranda/Verdana-Bold.svg#Verdana-Bold") format("svg");
+    url("/blog/fonts/veranda/Verdana-Bold.eot?#iefix") format("embedded-opentype"),
+    url("/blog/fonts/veranda/Verdana-Bold.woff2") format("woff2"),
+    url("/blog/fonts/veranda/Verdana-Bold.woff") format("woff"),
+    url("/blog/fonts/veranda/Verdana-Bold.svg#Verdana-Bold") format("svg");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -26,13 +26,13 @@
 
 @font-face {
   font-family: "Verdana";
-  src: url("/fonts/veranda/Verdana-BoldItalic.eot");
+  src: url("/blog/fonts/veranda/Verdana-BoldItalic.eot");
   src:
-    url("/fonts/veranda/Verdana-BoldItalic.eot?#iefix")
+    url("/blog/fonts/veranda/Verdana-BoldItalic.eot?#iefix")
       format("embedded-opentype"),
-    url("/fonts/veranda/Verdana-BoldItalic.woff2") format("woff2"),
-    url("/fonts/veranda/Verdana-BoldItalic.woff") format("woff"),
-    url("/fonts/veranda/Verdana-BoldItalic.svg#Verdana-BoldItalic")
+    url("/blog/fonts/veranda/Verdana-BoldItalic.woff2") format("woff2"),
+    url("/blog/fonts/veranda/Verdana-BoldItalic.woff") format("woff"),
+    url("/blog/fonts/veranda/Verdana-BoldItalic.svg#Verdana-BoldItalic")
       format("svg");
   font-weight: bold;
   font-style: italic;

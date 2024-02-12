@@ -1,13 +1,14 @@
 ---
+import { formatLink } from "../utils/formatLink";
 ---
 <nav>
-    <a href="/" class="home-link">
-        <img src="/images/profile.webp" class="nav-img" alt="A self portrait of coffee red and white with a black background.">
+    <a href={formatLink("/")} class="home-link">
+        <img src={formatLink("/images/profile.webp")} class="nav-img" alt="A self portrait of coffee red and white with a black background.">
         <h1 class="nav-header">coffee</h1>
     </a>
-    <a href="/art" class="nav-link only-desktop grow">art</a>
-    <a href="/rpgs" class="nav-link only-desktop grow">rpgs</a>
-    <a href="/other" class="nav-link only-desktop grow">other projects</a>
+    <a href={formatLink("/art")} class="nav-link only-desktop grow">art</a>
+    <a href={formatLink("/rpgs")} class="nav-link only-desktop grow">rpgs</a>
+    <a href={formatLink("/other")} class="nav-link only-desktop grow">other projects</a>
 </nav>
 <style scoped>
     nav {

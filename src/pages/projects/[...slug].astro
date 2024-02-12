@@ -1,6 +1,8 @@
 ---
 import { getCollection } from "astro:content";
+
 import ProjectLayout from "../../layouts/ProjectLayout.astro";
+import { formatLink } from "../../utils/formatLink";
 
 export async function getStaticPaths() {
   const blogEntries = await getCollection("projects");
@@ -14,7 +16,7 @@ const { entry } = Astro.props;
 const { Content } = await entry.render();
 ---
 <ProjectLayout frontmatter={entry.data}>
-  <img src={entry.data.image.src} alt={entry.data.image.alt} class="full-bleed header-image">
+  <img src={formatLink(entry.data.image.src)} alt={entry.data.image.alt} class="full-bleed header-image">
   <Content />
 </ProjectLayout>
 <style>

@@ -30,4 +30,3 @@ $ yarn start
 this should open a window in your default browser with the website running.
 
 after you make your changes, commit them with `git commit` and save them on github with `git push`. [here](https://education.github.com/git-cheat-sheet-education.pdf) is a git cheatsheet for more info on how all that works.
-
